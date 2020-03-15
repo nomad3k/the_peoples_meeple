@@ -5,7 +5,7 @@ Author: chris@unchain.life
 Author URI: https://unchain.life/
 Description: Custom Theme for The People's Meeple
 Requires at least: WordPress 4.9.6
-Version: 1.2
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: the_peoples_meeple
@@ -39,4 +39,5 @@ h1, h2, h3, h4, h5, h6 {
 @import './_menu';
 @import './_title-bar';
 @import './_template';
+@import './_article';
 @import './_container';
