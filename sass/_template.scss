@@ -1,0 +1,29 @@
+.tpm-template {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  background-color: $white;
+  background-image: url(/wp-content/themes/the_peoples_meeple/assets/images/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__header {
+    flex: 0 0 auto;
+    color: $white;
+  }
+
+  &__footer {
+    text-align: center;
+    padding: 20px 0;
+    flex: 0 0 auto;
+    background-color: $black;
+    color: $white;
+    border-top: solid 8px $red;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+}

@@ -1,0 +1,46 @@
+.tpm-title-bar {
+  background-color: $white;
+  height: 96px + 8px;
+  border-bottom: solid 8px $red;
+
+  &__container {
+    width: $width;
+    max-width: $width;
+    @media (max-width: $width) {
+      width: 100%;
+    }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__lhs,
+  &__rhs {
+    flex: 0 0 auto;
+  }
+  &__centre {
+    flex: 1 1 auto;
+    text-align: centre;
+    &-header {
+      margin: 8px 0;
+      text-align: center;
+      display: block;
+      width: 100%;
+      & > a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+    &-sub-header {
+      text-align: center;
+      display: block;
+      width: 100%;
+      color: $grey;
+      a {
+        text-decoration: none;
+        color: $grey;
+      }
+    }
+  }
+
+}

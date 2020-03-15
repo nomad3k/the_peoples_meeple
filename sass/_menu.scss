@@ -1,0 +1,72 @@
+$menu-height: 32px;
+
+.tpm-menu {
+  color: white;
+  height: $menu-height;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+  &__fill {
+    flex: 1 1 auto;
+    background-color: $red;
+  }
+
+  &__container {
+    flex: 0 0 auto;
+    width: $width;
+    max-width: $width;
+    @media (max-width: $width) {
+      width: 100%;
+    }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  &__lhs,
+  &__rhs {
+    background-color: $red;
+    flex: 0 0 auto;
+    font-size: 16px;
+    padding: 4px 20px;
+    * {
+      font-weight: 400;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  &__lhs { text-align: left; }
+  &__rhs { text-align: right; }
+  &__lhs-separator,
+  &__rhs-separator {
+    content: '';
+    border-style: solid;
+    border-width: $menu-height/2;
+    font-size: 0;
+  }
+  &__lhs-separator {
+    border-color: $red transparent transparent $red;
+  }
+  &__rhs-separator {
+    border-color: $red $red transparent transparent;
+  }
+  &__centre {
+    & > * {
+      margin: 4px 0;
+    }
+    text-align: center;
+    flex: 1 1 auto;
+    color: $black;
+  }
+  @include is-mobile {
+    &__centre {
+      background-color: $red;
+      font-size: 0;
+    }
+    &__lhs-separator, &__rhs-separator {
+      display: none;
+    }
+  }
+}

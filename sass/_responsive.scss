@@ -1,0 +1,63 @@
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 414px;
+
+$width: $desktop;
+
+@mixin is-mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  @media (min-width: $mobile+1) {
+    @content;
+  }
+}
+
+@mixin is-tablet {
+  @media (min-width: $mobile+1) and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin not-tablet {
+  @media (max-width: $mobile), (min-width: $tablet+1) {
+    @content;
+  }
+}
+
+@mixin is-desktop {
+  @media (min-width: $desktop+1) {
+    @content;
+  }
+}
+
+@mixin not-desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+.not-mobile {
+  @include is-mobile {
+    display: none;
+  }
+}
+
+.only-mobile {
+  @include not-mobile {
+    display: none;
+  }
+}
+
+@include is-mobile {
+  // .mobile-flex .fl-col-group {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+  @for $i from 0 through 20 {
+    .mobile-order-#{$i} { order: $i; }
+  }
+}

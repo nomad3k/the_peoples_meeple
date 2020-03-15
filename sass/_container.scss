@@ -1,0 +1,14 @@
+.tpm-container {
+  width: $width;
+  max-width: $width;
+  @media (max-width: $width) {
+    width: 100%;
+  }
+  margin: 0 auto;
+  &__lhs, &__rhs {
+    float: 0 0 auto;
+  }
+  &__centre {
+    float: 1 1 auto;
+  }
+}

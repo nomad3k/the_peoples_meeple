@@ -1,0 +1,44 @@
+.tpm-box {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+  &__item {
+    width: 33%;
+    text-decoration: none;
+
+    & + & { margin-left: 10px; }
+
+    @each $color, $value in $colors {
+      &--#{$color} &-header {
+        background-color: $value;
+      }
+    }
+
+    &-contents {
+      background-image: url(/wp-content/themes/the_peoples_meeple/assets/images/wood.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-header {
+      margin: 0;
+      padding: 8px;
+      text-align: center;
+      color: white;
+    }
+    &-content {
+      padding-bottom: 66%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &--Eat &-header { background-color: $blue; }
+    &--Eat &-content { background-image: url(/wp-content/themes/the_peoples_meeple/assets/images/eat.png); }
+    &--Drink &-header { background-color: $green; }
+    &--Drink &-content { background-image: url(/wp-content/themes/the_peoples_meeple/assets/images/drink.png); }
+    &--Play &-header { background-color: $orange; }
+    &--Play &-content { background-image: url(/wp-content/themes/the_peoples_meeple/assets/images/play.png); }
+  }
+}

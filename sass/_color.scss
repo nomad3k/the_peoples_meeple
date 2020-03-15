@@ -1,0 +1,29 @@
+$black: #222222;
+$white: #ffffff;
+$grey: #aaaaaa;
+
+$colors: (
+  red: #BF0000,
+  orange: #F5A623,
+  green: #6EB81D,
+  blue: #4A90E2,
+  purple: #A04AE2f
+);
+
+$red: map-get($colors, red);
+$orange: map-get($colors, orange);
+$green: map-get($colors, green);
+$blue: map-get($colors, blue);
+$purple: map-get($colors, purple);
+
+@each $name, $color in $colors
+{
+  .#{$name} {
+    color: $color;
+    &.filled {
+      background-color: $color;
+      color: $white;
+      padding: 8px;
+    }
+  }
+}

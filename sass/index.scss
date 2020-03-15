@@ -1,0 +1,42 @@
+/*
+Theme Name: The Peoples Meeple
+Theme URI: https://unchain.life/wordpress/themes/the_peoples_meeple/
+Author: chris@unchain.life
+Author URI: https://unchain.life/
+Description: Custom Theme for The People's Meeple
+Requires at least: WordPress 4.9.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: the_peoples_meeple
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+
+@import './_wordpress';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Baumans";
+}
+
+@import './_responsive';
+@import './_color';
+@import './_boxes';
+@import './_menu';
+@import './_title-bar';
+@import './_template';
+@import './_container';
